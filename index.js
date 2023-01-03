@@ -84,20 +84,20 @@ mongoose
     // app.listen(process.env.PORT);
     https
       .createServer(
-        {
-          key: fs.readFileSync(
-            `./modules/common/keys/${process.env.NODE_ENV}/${
-              process.env.SSL_KEY_NAME
-            }`
-          ),
-          cert: fs.readFileSync(
-            `./modules/common/keys/${process.env.NODE_ENV}/${
-              process.env.SSL_CRT_NAME
-            }`
-          ),
-          requestCert: false,
-          rejectUnauthorized: false
-        },
+        // {
+        //   key: fs.readFileSync(
+        //     `./modules/common/keys/${process.env.NODE_ENV}/${
+        //       process.env.SSL_KEY_NAME
+        //     }`
+        //   ),
+        //   cert: fs.readFileSync(
+        //     `./modules/common/keys/${process.env.NODE_ENV}/${
+        //       process.env.SSL_CRT_NAME
+        //     }`
+        //   ),
+        //   requestCert: false,
+        //   rejectUnauthorized: false
+        // },
         app
       )
       .listen(port);
